@@ -11,8 +11,8 @@ namespace OnFire
         static string baseURL = "";
         static  void Main(string[] args)
         {
-            Test();
-            WriteTest();
+            //Test();
+            //WriteTest();
             Console.ReadKey();
         }
   
