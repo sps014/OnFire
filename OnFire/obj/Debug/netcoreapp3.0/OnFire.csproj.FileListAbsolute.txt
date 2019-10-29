@@ -1,0 +1,11 @@
+C:\Users\shive\source\repos\OnFire\OnFire\bin\Debug\netcoreapp3.0\OnFire.exe
+C:\Users\shive\source\repos\OnFire\OnFire\bin\Debug\netcoreapp3.0\OnFire.deps.json
+C:\Users\shive\source\repos\OnFire\OnFire\bin\Debug\netcoreapp3.0\OnFire.runtimeconfig.json
+C:\Users\shive\source\repos\OnFire\OnFire\bin\Debug\netcoreapp3.0\OnFire.runtimeconfig.dev.json
+C:\Users\shive\source\repos\OnFire\OnFire\bin\Debug\netcoreapp3.0\OnFire.dll
+C:\Users\shive\source\repos\OnFire\OnFire\bin\Debug\netcoreapp3.0\OnFire.pdb
+C:\Users\shive\source\repos\OnFire\OnFire\obj\Debug\netcoreapp3.0\OnFire.AssemblyInfoInputs.cache
+C:\Users\shive\source\repos\OnFire\OnFire\obj\Debug\netcoreapp3.0\OnFire.AssemblyInfo.cs
+C:\Users\shive\source\repos\OnFire\OnFire\obj\Debug\netcoreapp3.0\OnFire.dll
+C:\Users\shive\source\repos\OnFire\OnFire\obj\Debug\netcoreapp3.0\OnFire.pdb
+C:\Users\shive\source\repos\OnFire\OnFire\obj\Debug\netcoreapp3.0\OnFire.csprojAssemblyReference.cache
