@@ -38,7 +38,7 @@ Database dbref = new Database("xyz.firebaseio.com");
 dbref.Child("Scores").Child("highestScore").DeleteValue();
 ```
 
-##### SignIn User 
+##### Sign in User 
 
 ```cs
 //Get Auth Key from your project on Firebase 
