@@ -1,5 +1,5 @@
 # OnFire
- Quick,Dirty library for Firebase Email Auth and Database Usage.
+ Quick,Tiny ,Dirty library for Firebase Email Auth and Database Usage , use for prototyping .
 ```
 OnFire 
 ```
@@ -37,8 +37,18 @@ dbref.Child("Scores").Child("highestScore").SaveValue(Score);
 Database dbref = new Database("xyz.firebaseio.com");
 dbref.Child("Scores").Child("highestScore").DeleteValue();
 ```
+```cs
+Database dbref = new Database("xyz.firebaseio.com");
+var child = dbref.Child("Scores").Child("highestScore");
+child.SubscribeDataChange<int>();
+//called every time data is changed in database
+ child.OnDataChange += Program_OnDataChange;
 
-#### Authenticated Save
+ /// when no need to get notified just Unsubscribe
+ child.UnsubscribeDataChange();
+```
+
+#### Authenticated Database Operation
 
 ```cs
 Database dbref = new Database("xyz.firebaseio.com");
