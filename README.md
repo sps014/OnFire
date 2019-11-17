@@ -38,6 +38,14 @@ Database dbref = new Database("xyz.firebaseio.com");
 dbref.Child("Scores").Child("highestScore").DeleteValue();
 ```
 
+#### Authenticated Save
+
+```cs
+Database dbref = new Database("xyz.firebaseio.com");
+dbref.AccessToken = AccessToken;
+dbref.Child("Scores").Child("highestScore").SaveValue(UserDetail);
+```
+
 ##### Sign in User 
 
 ```cs
@@ -58,4 +66,11 @@ dbref.Child("Scores").Child("highestScore").DeleteValue();
  var IDToken=user.IdToken;
  var userInfo =await auth.GetUser(IDToken);
  Console.WriteLine(userInfo.CreatedAt);
+```
+
+#### Verify Email
+
+```cs
+EMailAuth auth = new EMailAuth(AuthKey);
+auth.SendVerification(idToken);
 ```
