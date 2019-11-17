@@ -11,11 +11,13 @@ OnFire
 | RestClient        |   class | A Rest Http Client with get ,put ,delete etc                         |
 
 
+
+
 ### Example Usage
 
 ##### Read From Realtime DataBase
 
-```
+```cs
 Database dbref = new Database("xyz.firebaseio.com");
 var userName=dbref.Child("Scores").Child("highestScore").GetValue<string>();
 Console.WriteLine($"user Name : {userName}");
@@ -23,13 +25,15 @@ Console.WriteLine($"user Name : {userName}");
 
 ##### Save in Database
 
-```
+```cs
 int Score = 9099;
 Database dbref = new Database("xyz.firebaseio.com");
 dbref.Child("Scores").Child("highestScore").SaveValue(Score);
 ```
+
 ##### Delete from Database
-```
+
+```cs
 Database dbref = new Database("xyz.firebaseio.com");
 dbref.Child("Scores").Child("highestScore").DeleteValue();
 ```
