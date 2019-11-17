@@ -10,4 +10,4 @@ OnFire
 | Cache             |      class    |  used to cache firebase data on device ram     |
 | RestClient        |   class | A Rest Http Client with get ,put ,delete etc                         |
 
-### Don't use cache events for now as the events leaks data , in our implementation 
+
