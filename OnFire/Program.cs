@@ -15,7 +15,8 @@ namespace OnFire
             //WriteTest();
             Console.ReadKey();
         }
-  
+
+
         class Detail
         {
             public string Class { get; set; } = "Y5";

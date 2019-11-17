@@ -20,6 +20,7 @@ namespace OnFire.Data
         private List<string> childKeyList=new List<string>();
         private bool ListenDataChange;
         private RestClient client = new RestClient();
+        public string AccessToken { get; set; } = null;
 
         public string Key
         {
@@ -37,14 +38,16 @@ namespace OnFire.Data
         {
             DatabaseURL = null;
         }
-        public Database(string databaseUrl)
+        public Database(string databaseUrl,string AccessToken=null)
         {
             DatabaseURL = databaseUrl;
+            this.AccessToken = AccessToken;
         }
-        public Database(string databaseUrl,List<string> childKeyList)
+        public Database(string databaseUrl,List<string> childKeyList,string AccessToken)
         {
             DatabaseURL = databaseUrl;
             this.childKeyList = childKeyList;
+            this.AccessToken = AccessToken;
         }
 
 
@@ -53,7 +56,7 @@ namespace OnFire.Data
             List<string> childKeyList = new List<string>();
             childKeyList.AddRange(this.childKeyList);
             childKeyList.Add(childKey);
-            return new Database(DatabaseURL, childKeyList);
+            return new Database(DatabaseURL, childKeyList,AccessToken);
         }
         public async Task<Dictionary<string, object>> GetChildren()
         {
@@ -132,7 +135,7 @@ namespace OnFire.Data
         {
             get
             {
-                return DatabaseURL + SubChildPath + "/.json";
+                return DatabaseURL + SubChildPath + "/.json"+AccessToken!=null? $"?access_token={AccessToken}":"";
             }
         }
 
