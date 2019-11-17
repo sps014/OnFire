@@ -37,3 +37,25 @@ dbref.Child("Scores").Child("highestScore").SaveValue(Score);
 Database dbref = new Database("xyz.firebaseio.com");
 dbref.Child("Scores").Child("highestScore").DeleteValue();
 ```
+
+##### SignIn User 
+
+```cs
+//Get Auth Key from your project on Firebase 
+ EMailAuth auth = new EMailAuth(AuthKey);
+ EMailAuth.User user=await auth.SignInUser(email, pass);
+ var IDToken=user.IdToken;
+ var userInfo =await auth.GetUser(IDToken);
+ Console.WriteLine(userInfo.EmailVerified);
+```
+
+##### Sign up User
+
+```cs
+ //Get Auth Key from your project on Firebase 
+ EMailAuth auth = new EMailAuth(AuthKey);
+ EMailAuth.User user=await auth.SignUpUser(email, pass);
+ var IDToken=user.IdToken;
+ var userInfo =await auth.GetUser(IDToken);
+ Console.WriteLine(userInfo.CreatedAt);
+```
