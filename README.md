@@ -1,5 +1,5 @@
 # OnFire
- Quick,Tiny ,Dirty library for Firebase Email Auth and Database Usage , use for prototyping .
+ Quick,Tiny ,Dirty library for Firebase Email Auth and Database Usage . Helps in quick prototyping.
 ```
 OnFire 
 ```
